@@ -19,17 +19,7 @@ import time
 from datetime import datetime
 
 credentials ={
-  "type": "service_account",
-  "project_id": "ninjavan-bi-automation-creds",
-  "private_key_id": "1a3974ffb05bdba5ed9fb78ff41be44142bbfa99",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCtR6FT0r3Q7qb2\nKbTDUvw3yliO3I/PSZDH37LdTduotEQNJPBDieABJTZCyeVkTdeJnuo2U5xK3YTH\n6y9UCEJl3lFHMl+BlVCDicu9g/opWHW9b8zIMUtgM/Jqrq8ug27J0+kYm5q4A+n0\n98nuwDfe6rfqLa3NKy5cmTcAfZGsUtacEZa8tS12BefhfICAtnXfhq7Lq821sV9B\ntWnjbeU9nZE3sAJzPjZygdXS/qXv6miydQTC/4iGbxeRwf1d8xbLHT/mdnzOVs5G\nBjj9Z/8e80OJtBFuQU4A1OoMzoUTgxkuoMoNOFQMwliteSBIpGdGGSjWCFiNskCJ\n7zFpwJmRAgMBAAECggEACGRdtdeRBdtpDqb6cDNGr9UG8PRRqrJfZq641Or+Zm9E\nlHZjhIHa7XNF63ont/HlLG8b3MGz4hRUZ/JF+oXj4VchDJet9HKs0ZIM4gLQTMxR\n93jArDlm8yPQ68XGCjSnWvL+aQiwN5VI8WpGx19b1Vn8ykSoFDWxKx7ogQeT1Iqi\nHuXBE7ekWG3yzuD+pHib1mm+xS0ZW7sPbNHEKwPxesOkMGUg2f21I6cCrd9uwb/r\nGRBHJfQdPsAGYsHFcICcRDnkxbdeGlSU2I2r1nrUxlpRk0oB41HoZcGGBuULqfxc\nOkw/zwz4Kkc7hXeB6tOLFr3uof/aihLw0F7VZCrkWQKBgQDV8yxY9myQDWNSQAeD\nV8bWY8E7M4W0jD/4h/29etydJo+56k4Xag6ofJkIWeuWFjj8vBblGMJM7rzLUe0W\n2EMVz1iwmAX3HSyviBrkKDpdoiFLNJIMxTdur8B9Y8yKy5Mlia/AgFHiHssXGBLY\n/yxGlfBDVPvIL5ctArE+Y6z+zwKBgQDPVic4K9nzYazO/ZTOQvep4uHoeGGULMv2\n8mcZjX+oqHdC5L83aCcTQTq4wQKOtNwZxquJJLvD1JHIZT44cio3Hcqb64t5x4gR\nvthtLa8P4887ysMSllfO4+D73syJ7PTGGgO9oSmdD2fd/57JcBDlTYQ/rqknMuqc\niV4RwNn5nwKBgC6Dd5i/ukp3Hqi7EucTJj9l4JSmVuMxupaluhx/oYbo40ZgEio0\n/IrUy9Bs/DLdEfagTbnw8A0ZuiHZ5dmZmrwbIAUEiAd5aEWhKXeA52+D2AkpnLb6\nCVsfCpI4KDfkmlEG5hbLzwGCAFU8/pv+nfmaj2mUCEk1T4CRnUcbFHkxAoGAQDtR\ndR5oq/STg6Cdi/TFIxVNpSY+HJhwK7XW6NykMszV/Zw9/N1AVb+8gGYS88Dl+vpI\nQ/lkTfu5mhp7VyNPHroU/Y7QK877wXudMt2XQVXy6nQbUNPQqiCAn6bbONN21TRT\n+lhGOwj9xZGeUItuQItuMAhdEO6+LfaEdP2IycMCgYAJNsd7Wov+HHQ9RGDwkxZX\nRjEfErBeXbVTycjCyY+BZ9ltomCY+eLVkaFVh9Pfd0xwPwgC1RtLfgTj+cpuDFub\nUQS/jFNJjK6cFpk+/W4aH0cRrtxmH6rLWw3VgbW25eV60ho3zam3megiz+MfQNTO\nopE+x2ssKMabWpqeAMhsPQ==\n-----END PRIVATE KEY-----\n",
-  "client_email": "ninjavan-bi-automation@ninjavan-bi-automation-creds.iam.gserviceaccount.com",
-  "client_id": "108999834131566155266",
-  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-  "token_uri": "https://oauth2.googleapis.com/token",
-  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/ninjavan-bi-automation%40ninjavan-bi-automation-creds.iam.gserviceaccount.com",
-  "universe_domain": "googleapis.com"
+
 }
 
 
@@ -547,13 +537,13 @@ shipper_name,global_id,sample_trid,alasan):
 for index,row in data.iterrows():
     print(row[5],row[26])
     if (row[5] == "REG") & (row[26]=="APPROVED"):
-        send_mail(row[1],this_is_list_cc,this_is_list_bcc,'ninjaminbot@gmail.com','icmdtdikoczdgljo',"Notifikasi: Shipper "+row[8]+" Berhasil Terdaftar",row[15],row[8],row[7],row[3],row[31])
+        send_mail(row[1],this_is_list_cc,this_is_list_bcc,'your email','your apppassword',"Notifikasi: Shipper "+row[8]+" Berhasil Terdaftar",row[15],row[8],row[7],row[3],row[31])
     elif (row[5] == "REG") & (row[26]=="REJECT"):
-        send_mail1(row[1],this_is_list_cc,this_is_list_bcc,'ninjaminbot@gmail.com','icmdtdikoczdgljo',"Notifikasi: Shipper "+row[8]+" Tidak dapat Diproses",row[15],row[8],row[7],row[3],row[27])
+        send_mail1(row[1],this_is_list_cc,this_is_list_bcc,'your email','your apppassword',"Notifikasi: Shipper "+row[8]+" Tidak dapat Diproses",row[15],row[8],row[7],row[3],row[27])
     elif (row[5] == "UNREG") & (row[26]=="APPROVED"):
-        send_mail2(row[1],this_is_list_cc,this_is_list_bcc,'ninjaminbot@gmail.com','icmdtdikoczdgljo',"Notifikasi: Shipper "+row[8]+" Sudah Berhasil di Take Out",row[15],row[8],row[7],row[3],row[31])
+        send_mail2(row[1],this_is_list_cc,this_is_list_bcc,'your email','your apppassword',"Notifikasi: Shipper "+row[8]+" Sudah Berhasil di Take Out",row[15],row[8],row[7],row[3],row[31])
     elif (row[5] == "UNREG") & (row[26]=="REJECT"):
-        send_mail3(row[1],this_is_list_cc,this_is_list_bcc,'ninjaminbot@gmail.com','icmdtdikoczdgljo',"Notifikasi: Shipper "+row[8]+" Tidak Berhasil di Take Out",row[15],row[8],row[7],row[3],row[27])
+        send_mail3(row[1],this_is_list_cc,this_is_list_bcc,'your email','your apppassword',"Notifikasi: Shipper "+row[8]+" Tidak Berhasil di Take Out",row[15],row[8],row[7],row[3],row[27])
     time.sleep(1)
         
         
